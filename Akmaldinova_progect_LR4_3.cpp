@@ -13,9 +13,9 @@ void EnterDigitN(int X, int& N) {
 
 
 void FirstDigit(int X) {
-// Функция для нахождения первой цифры числа X
+int firstDigit = X / 100; // Получаем первую цифру
+    cout << "Первая цифра числа X: " << firstDigit << endl;
 }
-
 void NthDigit(int X, int N) {
 //Функция для нахождения N-й цифры числа X (нумерация справа налево)
 }
