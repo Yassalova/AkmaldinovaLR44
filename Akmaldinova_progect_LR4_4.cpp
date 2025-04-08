@@ -17,7 +17,8 @@ void FirstDigit(int X) {
 }
 
 void NthDigit(int X, int N) {
-//Функция для нахождения N-й цифры числа X (нумерация справа налево)
+ int nthDigit = (X / static_cast<int>(pow(10, N))) % 10; 
+    cout << N << "-я цифра числа X (справа налево): " << nthDigit << endl;
 }
 
 int main() {
