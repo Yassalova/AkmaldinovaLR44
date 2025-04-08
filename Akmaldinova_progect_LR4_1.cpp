@@ -4,7 +4,18 @@
 using namespace std;
 
 void EnterThreeDigitNumber(int& X) {
-// Функция для ввода целого трехзначного числа
+    do {
+        cout << "Введите целое трехзначное число X: ";
+        if (!(cin >> X)) {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Неверный ввод. Пожалуйста, введите целое число." << endl;
+        } else if (X < 100 || X > 999) {
+            cout << "Число должно быть трехзначным. Попробуйте снова." << endl;
+        }
+    } while (X < 100 || X > 999);
+}
+
 }
 
 void EnterDigitN(int X, int& N) {
