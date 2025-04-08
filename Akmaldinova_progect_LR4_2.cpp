@@ -8,9 +8,17 @@ void EnterThreeDigitNumber(int& X) {
 }
 
 void EnterDigitN(int X, int& N) {
-// Функция для ввода цифры N (меньше числа разрядов числа X)
+ do {
+        cout << "Введите цифру N (меньше числа разрядов числа X, т.е. N < 3): ";
+        if (!(cin >> N)) {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Неверный ввод. Пожалуйста, введите целое число." << endl;
+        } else if (N < 0 || N >= 3) {
+            cout << "Цифра N должна быть от 0 до 2. Попробуйте снова." << endl;
+        }
+    } while (N < 0 || N >= 3);
 }
-
 
 void FirstDigit(int X) {
 // Функция для нахождения первой цифры числа X
